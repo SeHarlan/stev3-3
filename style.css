@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+}
+
+canvas {
+  display: block;
+}
+
+#loading { 
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family:  VT323, monospace;
+  font-size: 3rem;  
+  background: -webkit-linear-gradient(rgb(255,254,211), rgb(255, 165, 220));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} 
+#loadingBg {
+  background: rgb(0,0,0);
+  padding: 0.5rem 1rem;
+}
+#loadingBorder {
+  /* background: linear-gradient( 45deg, rgb(215,130,43), rgb(117,77,61)); */
+  padding: 0.5rem;
+  animation: spinningBorder 1.5s linear infinite;
+}
+
+#p5_loading {
+  display: none;
+}
+
+
+
+
+@keyframes spinningBorder {
+  0% {
+    background: linear-gradient( 0deg, rgb(255,254,211), rgb(255, 165, 220));
+  }
+  25% {
+    background: linear-gradient( 90deg, rgb(255,254,211), rgb(255, 165, 220));
+  }
+  50% {
+    background: linear-gradient( 180deg, rgb(255,254,211), rgb(255, 165, 220));
+  }
+  75% {
+    background: linear-gradient( 270deg, rgb(255,254,211), rgb(255, 165, 220));
+  } 
+  100% {
+    background: linear-gradient( 360deg, rgb(255,254,211), rgb(255, 165, 220));
+  }
+}
